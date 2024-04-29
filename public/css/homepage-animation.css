@@ -1,0 +1,128 @@
+@keyframes moveCircle2 {
+    0% {
+        transform: translate(-50%, -160%);
+    }
+    100% {
+        transform: translate(20%, -90%);
+    }
+}
+@keyframes moveCircle3 {
+    0% {
+        transform: translate(28%, -205%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform: translate(-15%, -110%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle4 {
+    0% {
+        transform:translate(-10%, -230%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(-117%, -220%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle5 {
+    0% {
+        transform:translate(-120%, -330%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(-205%, -395%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle6 {
+    0% {
+        transform:translate(-220%, -535%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(-255%, -640%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle7 {
+    0% {
+        transform:translate(-276%, -810%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(-250%, -925%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle8 {
+    0% {
+        transform:translate(-272%, -1133%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(-185%, -1220%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle9 {
+    0% {
+        transform:translate(-201%, -1478%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(-70%, -1520%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle10 {
+    0% {
+        transform:translate(-73%, -1845%)
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(100%, -1820%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle11 {
+    0% {
+        transform:translate(125%, -2230%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(280%, -2120%);
+        visibility: visible;
+    }
+}
+@keyframes moveCircle12 {
+    0% {
+        transform:translate(348%, -2654%);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        transform:translate(450%, -2440%);
+        visibility: visible;
+    }
+}
