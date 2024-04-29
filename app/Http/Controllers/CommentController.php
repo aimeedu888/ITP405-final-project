@@ -66,6 +66,14 @@ class CommentController extends Controller
             'newComment' => 'required|filled'
         ]);
 
+        $existingComment = AlbumComment::where('comment', $request->input('newComment'))->first();
+
+        if ($existingComment) {
+            return redirect()->route('albumDetail', ['group' => $group, 'albumID' => $albumID, 'commentIndex' => $commentIndex])
+                ->with('commentError', 'Same comment')
+                ->with('comment_id', $comment_id);
+        }
+
         //check if exists
         $existingComment = DB::table('album_comments')
         ->where('id', $comment_id)
@@ -75,13 +83,6 @@ class CommentController extends Controller
             return redirect()->route('albumDetail', ['group' => $group, 'albumID' => $albumID, 'commentIndex' => $commentIndex])->with('commentError', 'Comment does not exist')->with('comment_id', $comment_id);
         }
 
-        $existingComment = TrackComment::where('comment', $request->input('newComment'))->first();
-
-        if ($existingComment) {
-            return redirect()->route('albumDetail', ['group' => $group, 'albumID' => $albumID, 'commentIndex' => $commentIndex])
-                ->with('commentError', 'Same comment')
-                ->with('comment_id', $comment_id);
-        }
 
         //check if it's from the logged in user
         if (Auth::id()!=$existingComment->user_id){
@@ -97,6 +98,14 @@ class CommentController extends Controller
             'newComment' => 'required|filled'
         ]);
 
+        $existingComment = TrackComment::where('comment', $request->input('newComment'))->first();
+
+        if ($existingComment) {
+            return redirect()->route('albumDetail', ['group' => $group, 'albumID' => $albumID, 'commentIndex' => $commentIndex])
+                ->with('commentError', 'Same comment')
+                ->with('comment_id', $comment_id);
+        }
+        
         //check if exists
         $existingComment = DB::table('track_comments')
         ->where('id', $comment_id)
@@ -106,13 +115,6 @@ class CommentController extends Controller
             return redirect()->route('albumDetail', ['group' => $group, 'albumID' => $albumID, 'commentIndex' => $commentIndex])->with('commentError', 'Comment does not exist')->with('comment_id', $comment_id);
         }
 
-        $existingComment = TrackComment::where('comment', $request->input('newComment'))->first();
-
-        if ($existingComment) {
-            return redirect()->route('albumDetail', ['group' => $group, 'albumID' => $albumID, 'commentIndex' => $commentIndex])
-                ->with('commentError', 'Same comment')
-                ->with('comment_id', $comment_id);
-        }
 
         //check if it's from the logged in user
         if (Auth::id()!=$existingComment->user_id){
